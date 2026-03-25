@@ -3,8 +3,8 @@
 ## Preview
 
 <p align="center">
-  <img src="public/image1.png" width="45%" />
-  <img src="public/image2.png" width="45%" />
+  <img src="public/screenshot1.png" width="400" height="250" style="object-fit: cover;" />
+  <img src="public/screenshot2.png" width="400" height="250" style="object-fit: cover;" />
 </p>
 
 ## Live Demo
