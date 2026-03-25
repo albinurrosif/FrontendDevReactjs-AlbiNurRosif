@@ -35,3 +35,22 @@ export const fetchRestaurants = async (categories?: string): Promise<Restaurant[
   }
 };
 
+/**
+ * Mengambil detail satu restoran berdasarkan ID.
+ * @param {string} id - ID unik restoran dari URL.
+ * @returns {Promise<Restaurant>}
+ */
+export const fetchRestaurantById = async (id: string): Promise<Restaurant> => {
+   try {
+     const response = await fetch(`${BASE_URL}/restaurants/${id}`);
+
+     if (!response.ok) {
+       throw new Error(`HTTP error! status: ${response.status}`);
+     }
+
+     return await response.json();
+   } catch (error) {
+     console.error('Gagal mengambil data restoran:', error);
+     throw error;
+   }
+};

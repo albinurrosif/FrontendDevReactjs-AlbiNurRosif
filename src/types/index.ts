@@ -15,6 +15,15 @@ export interface Review {
 }
 
 /**
+ * Merepresentasikan lokasi restoran.
+ */
+export interface Location {
+  lat: number;
+  lng: number;
+  address?: string;
+}
+
+/**
  * Merepresentasikan entitas Restoran
  */
 export interface Restaurant {
@@ -26,4 +35,5 @@ export interface Restaurant {
   priceLevel: string;
   isOpen: boolean;
   reviews?: Review[];
+  location?: Location;
 }

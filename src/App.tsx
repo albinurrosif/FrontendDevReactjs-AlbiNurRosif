@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainPage from './pages/MainPage';
+import DetailPage from './pages/DetailPage';
+
 
 function App() {
   return (
@@ -9,7 +11,7 @@ function App() {
         <Route path="/" element={<MainPage />} />
 
         {/* Halaman Detail*/}
-        <Route path="/detail/:id" element={<div>Halaman Detail Restoran</div>} />
+        <Route path="/detail/:id" element={<DetailPage />} />
       </Routes>
     </BrowserRouter>
   );
