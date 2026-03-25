@@ -1,10 +1,10 @@
 # Restaurant Apps - Frontend Developer Challenge
 
 ### Home Page
-![Home](docs/home.png)
+![Home](public/image1.png)
 
 ### Detail Page
-![Detail](docs/detail.png)
+![Detail](public/image2.png)
 
 ## Live Demo
 
