@@ -1,73 +1,105 @@
-# React + TypeScript + Vite
+# Restaurant Apps - Frontend Developer Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+![App Screenshot](docs/screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Open Live Demo](https://frontenddevreactjs-albinurrosif.netlify.app/)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+[![React](https://img.shields.io/badge/React-19-blue)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Build-Vite-purple)](https://vitejs.dev/)
+[![Tailwind](https://img.shields.io/badge/TailwindCSS-4-cyan)](https://tailwindcss.com/)
+[![Shadcn UI](https://img.shields.io/badge/UI-Shadcn-black)](https://ui.shadcn.com/)
+[![React Router](https://img.shields.io/badge/Routing-React%20Router%207-red)](https://reactrouter.com/)
+[![React Leaflet](https://img.shields.io/badge/Maps-React%20Leaflet-green)](https://react-leaflet.js.org/)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Features
+
+- Menampilkan daftar restoran
+- Filter restoran
+- Halaman detail restoran
+- Menampilkan lokasi restoran menggunakan map(dummy)
+
+---
+
+## API
+
+Data diambil dari MockAPI:
+
+https://69c3bf29b780a9ba03e7cc75.mockapi.io/restaurants
+
+---
+
+## Project Specifications
+
+- React Version: 19.2.4
+- Node.js Version (development): 24.11.1
+- Recommended Node.js: >= 18
+- Build Tool: Vite
+- CSS Framework: Tailwind CSS 4.2.2
+- Routing: React Router 7
+- Maps: React Leaflet 5
+
+---
+
+## Project Structure
+
+src/
+  components/    # reusable UI components
+  pages/         # main pages (home, detail)
+  services/      # API calls
+  types/         # TypeScript types
+
+---
+
+## Getting Started
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/albinurrosif/FrontendDevReactjs-AlbiNurRosif.git
+cd FrontendDevReactjs-AlbiNurRosif
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Run Development Server
+
+```bash
+npm run dev
+```
+
+Aplikasi akan berjalan di http://localhost:5173
+
+### 4. Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## Troubleshooting
+
+- Jika terjadi error saat install:
+  hapus `node_modules` dan `package-lock.json`, lalu jalankan `npm install` ulang
+
+- Jika port sudah digunakan:
+  Vite akan otomatis menggunakan port lain
+
+---
