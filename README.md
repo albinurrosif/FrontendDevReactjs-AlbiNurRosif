@@ -1,10 +1,11 @@
 # Restaurant Apps - Frontend Developer Challenge
 
-### Home Page
-![Home](public/image1.png)
+## Preview
 
-### Detail Page
-![Detail](public/image2.png)
+<p align="center">
+  <img src="public/image1.png" width="45%" />
+  <img src="public/image2.png" width="45%" />
+</p>
 
 ## Live Demo
 
