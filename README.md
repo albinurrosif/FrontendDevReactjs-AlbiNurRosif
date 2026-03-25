@@ -55,11 +55,13 @@ https://69c3bf29b780a9ba03e7cc75.mockapi.io/restaurants
 
 ## Project Structure
 
+```bash
 src/
-components/ # reusable UI components
-pages/ # main pages (home, detail)
-services/ # API calls
-types/ # TypeScript types
+  components/    # reusable UI components
+  pages/         # main pages (home, detail)
+  services/      # API calls
+  types/         # TypeScript types
+```
 
 ---
 
