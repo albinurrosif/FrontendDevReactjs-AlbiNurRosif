@@ -1,10 +1,6 @@
 # Restaurant Apps - Frontend Developer Challenge
 
----
-
-![App Screenshot](docs/screenshot.png)
-
----
+![App Screenshot](public/screenshot.png)
 
 ## Live Demo
 
@@ -56,10 +52,10 @@ https://69c3bf29b780a9ba03e7cc75.mockapi.io/restaurants
 ## Project Structure
 
 src/
-  components/    # reusable UI components
-  pages/         # main pages (home, detail)
-  services/      # API calls
-  types/         # TypeScript types
+components/ # reusable UI components
+pages/ # main pages (home, detail)
+services/ # API calls
+types/ # TypeScript types
 
 ---
 
