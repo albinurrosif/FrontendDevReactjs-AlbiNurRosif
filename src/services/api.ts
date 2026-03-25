@@ -1,24 +1,24 @@
-import type { Restaurant } from '@/types';
-
 /**
  * @fileoverview Service untuk mengelola permintaan data ke API eksternal.
  * Mengimplementasikan pengambilan data restoran dengan dukungan filter kategori.
  */
 
+import type { Restaurant } from '@/types';
+
 const BASE_URL = 'https://69c3bf29b780a9ba03e7cc75.mockapi.io';
 
 /**
  * Mengambil daftar restoran dari MockAPI.
- * * @param {string} category - Nama kategori masakan untuk difilter oleh server.
+ * * @param {string} categories - Nama kategori masakan untuk difilter oleh server.
  * @returns {Promise<Restaurant[]>} Promise yang menghasilkan array objek Restaurant.
  * @throws {Error} Jika respons network tidak berhasil.
  */
-export const fetchRestaurants = async (category?: string): Promise<Restaurant[]> => {
+export const fetchRestaurants = async (categories?: string): Promise<Restaurant[]> => {
   try {
     const url = new URL(`${BASE_URL}/restaurants`);
 
-    if (category && category !== 'All') {
-      url.searchParams.append('category', category);
+    if (categories && categories !== 'All') {
+      url.searchParams.append('categories', categories);
     }
 
     const response = await fetch(url.toString());
@@ -34,3 +34,4 @@ export const fetchRestaurants = async (category?: string): Promise<Restaurant[]>
     throw error;
   }
 };
+

@@ -20,8 +20,8 @@ export interface Review {
 export interface Restaurant {
   id: string;
   name: string;
-  imageUrl: string;
-  category: string;
+  photos: string[];
+  categories: string[];
   rating: number;
   priceLevel: string;
   isOpen: boolean;
